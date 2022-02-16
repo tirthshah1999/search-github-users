@@ -27,7 +27,7 @@ const Repos = () => {
   }).slice(0, 5);
   console.log(mostUsed);
 
-  // most stars per language -- Chart used value to display, but we want start count so use map
+  // most stars per language -- Chart used value to display, but we want star count so use map
   const mostPopular = Object.values(languages).sort((a,b) => {
     return b.stars - a.stars
   }).map((item) => {
