@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { GithubContext } from '../context/context';
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
+import { Pie3D, Column3D, Bar3D, Doughnut2D } from './Charts';
 
 const Repos = () => {
   const {repos} = useContext(GithubContext);
@@ -25,7 +25,6 @@ const Repos = () => {
   const mostUsed = Object.values(languages).sort((a,b) => {
     return b.value - a.value;
   }).slice(0, 5);
-  console.log(mostUsed);
 
   // most stars per language -- Chart used value to display, but we want star count so use map
   const mostPopular = Object.values(languages).sort((a,b) => {
