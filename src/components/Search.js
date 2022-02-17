@@ -30,7 +30,6 @@ const Search = () => {
             {requests > 0 && !loading && <button type='submit'>search</button>}
           </div>
         </form>
-        <h3>request: {requests} / 60</h3>
       </Wrapper>
     </section>
   )
